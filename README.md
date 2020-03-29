@@ -1,1 +1,4 @@
-# JS-TS
+# PLAN #
+* JS
+* TS
+* CI/CD
