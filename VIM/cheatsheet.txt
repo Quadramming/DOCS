@@ -1,0 +1,6 @@
+:set {option}? -> Show value of {option}
+:set {option} -> Toggle if togglable. Show value otherwise
+
+:set fileencoding? -> Show current file encoding
+:set fileencoding={utf-8|cp1251|...} -> Convert current file to that encoding
+:e ++enc={utf-8|cp1251|...} -> Reopen file with that encoding

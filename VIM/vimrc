@@ -1,0 +1,40 @@
+" No space after (=) allowed
+set guifont=Courier\ New\:h12 " Font and size
+set encoding=utf-8 " Encoding inside vim
+set fileencoding=utf-8 " File buffer encoding by default
+set visualbell " No error beep. Just flash screen
+
+syntax enable " Set syntax highlighting on
+colorscheme molokai " Color scheme. Download it
+
+set listchars=space:\ ,tab:>\ ,trail:.
+set list " Show whitespace chars
+
+set history=200 " Number of ':' commands in history
+
+set incsearch " Search while entering search pattern
+set smartcase " Smart case for search
+set timeoutlen=10
+
+set smartindent " Insert smart indent automatically
+
+" Do not lose indent if line is empty
+nnoremap O O<SPACE><BS>
+nnoremap o o<SPACE><BS>
+inoremap <CR> <SPACE><BS><CR>
+inoremap <ESC> <SPACE><BS><ESC>
+
+set tabstop=2 " Spaces in one tab
+set shiftwidth=0 " Use indent like tabstop
+set softtabstop=0 noexpandtab
+set wildmode=list,full
+
+set number " Show line numbers
+set ruler " Show info line with current position
+set showcmd
+set hlsearch
+
+set noundofile
+
+
+
