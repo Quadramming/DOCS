@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Random string</title>
+		<meta charset='utf-8'>
+		<style type='text/css'>
+			body {word-wrap: break-word}
+		</style>
+		<script type='text/javascript'>
+			function doRandom() {
+				const chars = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890';
+				let string = '';
+				for ( let i = 0; i < 8192; ++i ) {
+					const randCharNumber = Math.floor( Math.random()*chars.length );
+					string += chars[randCharNumber];
+				}
+				document.body.innerHTML = string;
+			}
+		</script>
+	</head>
+	<body onload='doRandom()'>
+	</body>
+</html>
