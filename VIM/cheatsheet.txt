@@ -4,3 +4,6 @@
 :set fileencoding? -> Show current file encoding
 :set fileencoding={utf-8|cp1251|...} -> Convert current file to that encoding
 :e ++enc={utf-8|cp1251|...} -> Reopen file with that encoding
+:w ++enc={utf-8|cp1251|...} -> Save file with that encoding
+:e ++ff={dos|unix|mac} -> Reopen file with that EOL type
+:set binary | e -> Reopen in binary mode

@@ -24,6 +24,8 @@ nnoremap o o<SPACE><BS>
 inoremap <CR> <SPACE><BS><CR>
 inoremap <ESC> <SPACE><BS><ESC>
 
+set paste " Use paste mode for terminals
+set nowrap " Use no word wrap
 set tabstop=2 " Spaces in one tab
 set shiftwidth=0 " Use indent like tabstop
 set softtabstop=0 noexpandtab
