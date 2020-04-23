@@ -46,8 +46,9 @@ function! GetLineBr()
 	endif
 endfunction
 
-set statusline=%<%F " Full file path
-set statusline+=\ %m
+set statusline=%<
+set statusline+=%F\  " Full file path
+set statusline+=%#ErrorMsg#%m%*
 set statusline+=%r
 set statusline+=%h
 set statusline+=%w
@@ -55,8 +56,9 @@ set statusline+=%q
 set statusline+=%k
 set statusline+=%a
 set statusline+=%=
-set statusline+=%p%% " Current percent of file
+set statusline+=\ %p%% " Current percent of file
 set statusline+=\ (%l/%L) " (current line / all lines )
+set statusline+=\ %c " Current column
 set statusline+=\ [%{&fileencoding==''?'bin':&fileencoding}] " File encoding
 set statusline+=\ [%{&fileformat}:%{GetLineBr()}] " File format and EOL
 set statusline+=\ 0x%-5B " Hex of current char
