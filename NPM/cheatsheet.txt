@@ -1,0 +1,69 @@
+Проверить версию:
+npm -v
+
+Обновить NPM:
+npm install npm@latest -g
+
+Установить пакет:
+npm install <package_name>
+
+Установить пакет глобально:
+npm install -g <package>
+
+Установить пакет с занесением в dependencies в package.json:
+npm install <package_name> --save
+Или в devDependencies:
+npm install <package_name> --save-dev
+
+Инициализировать проект (модуль):
+npm init
+По умолчанию:
+npm init --yes
+
+Сделать аудит:
+npm audit
+
+"Просроченные" пакеты:
+npm outdated
+
+Обновить пакеты:
+npm update
+
+Обновить глобальный пакет:
+npm update -g <package>
+
+Найти глобальные просроченные пакеты:
+npm outdated -g --depth=0
+
+Обновить все глобальные пакеты:
+npm update -g
+
+Посмотреть установленные:
+npm ls
+npm ls -g --depth=0
+
+Удалить:
+npm uninstall <package>
+С вынесением из dependencies:
+npm uninstall <package> --save
+Глобальный пакет:
+npm uninstall <package> -g
+
+Отчистить от модулей отсутствующих в dependencies:
+npm prune
+
+Опубликовать или обновить:
+npm publish
+
+Повысить версию на одну:
+npm version patch | minor | major
+
+Работа с пользователями:
+npm adduser
+npm whoami
+npm login
+
+Работа с tag-s:
+npm dist-tag add <pkg>@<version> [<tag>]
+npm publish --tag beta
+npm install somepkg@beta
