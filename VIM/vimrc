@@ -13,6 +13,7 @@ set list " Show whitespace chars
 set history=200 " Number of ':' commands in history
 
 set incsearch " Search while entering search pattern
+set ignorecase " Ignore case for search
 set smartcase " Smart case for search
 set timeoutlen=10
 
@@ -68,3 +69,4 @@ set iminsert=0
 set imsearch=0
 
 set noundofile
+set noswapfile
