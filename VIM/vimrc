@@ -70,3 +70,5 @@ set imsearch=0
 
 set noundofile
 set noswapfile
+
+set cb=unnamed
