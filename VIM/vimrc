@@ -71,4 +71,6 @@ set imsearch=0
 set noundofile
 set noswapfile
 
-set cb=unnamed
+set cb=unnamed " Yank and paste to OS copy buffer
+set eol " End of line at the end of file
+set fixeol " Fix end of line
