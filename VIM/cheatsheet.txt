@@ -7,3 +7,4 @@
 :w ++enc={utf-8|cp1251|...} -> Save file with that encoding
 :e ++ff={dos|unix|mac} -> Reopen file with that EOL type
 :set binary | e -> Reopen in binary mode
+:set noeol nofixeol -> Delete last EOL
