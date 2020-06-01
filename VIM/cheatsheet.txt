@@ -8,3 +8,7 @@
 :e ++ff={dos|unix|mac} -> Reopen file with that EOL type
 :set binary | e -> Reopen in binary mode
 :set noeol nofixeol -> Delete last EOL
+
+ftype txtfile="C:\Program Files (x86)\Vim\vim82\gvim.exe" --remote-tab-silent "%1"
+ftype code="C:\Program Files (x86)\Vim\vim82\gvim.exe" --remote-tab-silent "%1"
+assoc .c=code
