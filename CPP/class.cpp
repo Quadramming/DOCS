@@ -9,7 +9,7 @@ public:
 		cout<<"Default constructor \n";
 	}
 	
-	virtual ~Foo() { // Destructor (virtual if Foo is meant to be a base class)
+	virtual ~Foo() noexcept { // Destructor (virtual if Foo is meant to be a base class)
 		cout<<"Destructor \n";
 	}
 	
