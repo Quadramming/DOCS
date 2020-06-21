@@ -4,6 +4,8 @@ set encoding=utf-8 " Encoding inside vim
 set fileencoding=utf-8 " File buffer encoding by default
 set visualbell " No error beep. Just flash screen
 
+language en_US " Set english language
+
 syntax enable " Set syntax highlighting on
 colorscheme molokai " Color scheme. Download it
 
