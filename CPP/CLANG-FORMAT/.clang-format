@@ -131,6 +131,7 @@ TabWidth: 2
 UseCRLF: false
 UseTab: ForContinuationAndIndentation
 #WhitespaceSensitiveMacros#
+#DanglingParenthesis: true # Control when be available
 ---
 Language: JavaScript
 JavaScriptQuotes: Single
