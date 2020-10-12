@@ -49,4 +49,50 @@ echo %%PATH%%
 
 :: FINDSRT uses "\" as escape
 
-syntax
+:: Pipes
+dir | more
+
+:: & - Do everything always in a row
+echo A & echo B
+:: && - Do B if A returns zero (success)
+echo A && echo B
+:: || - Do B if A returns non-zero (fail)
+echo A && echo B
+:: Parenthesized command works like one simple command
+(echo A & echo B) | more
+
+:: Redirect stderr (1 for stdin) to nowhere
+dir 2> NUL
+
+:: Overwrites
+echo 3 > foo
+:: Append
+echo 1 >> foo
+echo 2 >> foo
+
+sort < foo
+
+:: Redirect to handle h (0 - stdin, 1 - stdout, 2 - strerr)
+:: >&h
+
+:: Redirect from handle h
+:: <&h
+
+:: Redirect to foo with errors
+dir nofile > foo 2>&1
+
+:: To different files
+dir nofile > foo 2> bar
+
+>foo echo Redirect can be first
+
+:: Only second
+echo A & echo B > foo
+
+:: Both
+(echo A & echo B) > foo
+
+:: Redirect console input to file (ctrl+z to stop)
+:: type con > foo
+
+::Batch reloading
