@@ -95,4 +95,28 @@ echo A & echo B > foo
 :: Redirect console input to file (ctrl+z to stop)
 :: type con > foo
 
-::Batch reloading
+set unsetedVar=
+
+echo Full pathname of command interpreter program file: %COMSPEC%
+
+echo PATH: %PATH%
+echo PATHEXT: %PATHEXT%
+:: Add .PL
+setx PATHEXT %PATHEXT%;.PL
+
+echo PROMPT %PROMPT%
+
+if %errorlevel% equ 0 echo Errorlevel is zero (success)
+:: Set errorlevel to 2
+cmd /c "exit /b 2"
+if %errorlevel% neq 0 echo Errorlevel is non-zero (fail)
+if errorlevel 1 echo Errorlevel is higher than 1
+
+:: End batch file with errorlevel 1
+:: exit /b 1
+
+(cmd /c "exit /b 0" && Echo SUCCESS) & (cmd /c "exit /b -1" || Echo FAIL)
+:: Chain
+(cmd /c "exit /b 0" & cmd /c "exit /b 1") || Echo FAIL
+
+set ErrorLevelBackUp=%errorlevel%
