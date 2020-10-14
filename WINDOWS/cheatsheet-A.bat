@@ -120,3 +120,26 @@ if errorlevel 1 echo Errorlevel is higher than 1
 (cmd /c "exit /b 0" & cmd /c "exit /b 1") || Echo FAIL
 
 set ErrorLevelBackUp=%errorlevel%
+
+set string=text
+:: Substring: from index, length
+echo %string:~1,2%
+:: Substring: from index to the end
+echo %string:~2%
+:: Substring: 3 last chars
+echo %string:~-3%
+:: Substring: from -4 to -1
+echo %string:~-4,-1%
+
+if %string:~0,2%==te echo '%string%' starts with 'te'
+
+:: Remove all 't' from string
+echo %string:t=%
+:: Replace 'te' to 'ne'
+echo %string:te=ne%
+:: Replace 'x' and everything before to 'le'
+echo %string:*x=le%
+
+:: Split with: comma, space, semicolon
+set variable=A,B C;D
+for %%i in (%variable%) do echo %%i
