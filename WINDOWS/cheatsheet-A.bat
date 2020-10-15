@@ -143,3 +143,47 @@ echo %string:*x=le%
 :: Split with: comma, space, semicolon
 set variable=A,B C;D
 for %%i in (%variable%) do echo %%i
+
+echo First arg: %1
+echo Second arg: %2
+echo Batch file: %0
+
+if not _%1_==__ echo First arg is here
+if _%9_==__ echo Arg 9 is not here
+
+:: Iter args with shift
+:: :argIterStart
+:: if -%1-==-- goto argIterEnd
+:: echo %1 & REM Can get arg over 9
+:: shift
+:: goto argIterStart
+:: :argIterEnd
+
+:: Assign arguments to argN vars
+set argCount=0
+:argIterStart
+if _%1_==__ goto argIterEnd
+set /a argCount+=1
+set arg%argCount%=%1
+shift
+goto argIterStart
+:argIterEnd
+echo Now first arg is arg1: %arg1%
+echo Arguments count: %argCount%
+
+:: Beware wildcards
+for %%i in (%*) do (
+  echo %%i
+)
+
+set argumentsAmount=0
+for %%i in (%*) do set /a argumentsAmount+=1
+echo Arguments amount: %argumentsAmount%
+
+:: Same 4 args
+:: test.bat a b c d
+:: test.bat a,b,c,d
+:: test.bat a, b, c, d
+:: test.bat a;b;c;d
+:: test.bat a=b=c=d
+:: test.bat a=b,=c,;=d
