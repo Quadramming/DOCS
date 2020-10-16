@@ -11,6 +11,20 @@ echo %PATH%
 echo First argument: %1
 echo Command-line arguments: %*
 
+echo File with no enclosing quotation marks: %~7
+echo Full file: %~f7
+echo Drive letter: %~d7
+echo Drive-less path: %~p7
+echo Only name (no ext): %~n7
+echo Ext: %~x7
+echo Short name: %~s7
+echo File attr: %~a7
+echo File date: %~t7
+echo File size: %~z7
+echo File P+N: %~pn7
+echo First match in PATH (or empty): %~$PATH:1
+echo Self file: %~nx0
+
 echo Current dir: %CD%
 echo System time: %TIME%
 echo Date: %DATE%
@@ -187,3 +201,15 @@ echo Arguments amount: %argumentsAmount%
 :: test.bat a;b;c;d
 :: test.bat a=b=c=d
 :: test.bat a=b,=c,;=d
+
+dir *.bat
+dir *.b?t
+dir ??o
+dir ????????.bat & REM Eight "?" - same as * here
+
+:: Ask for var value
+:: SET /P var=
+:: Ask for some choice
+:: CHOICE
+
+
