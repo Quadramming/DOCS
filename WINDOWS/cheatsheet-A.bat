@@ -1,3 +1,5 @@
+@echo off
+
 VER
 HELP
 REM /?
@@ -212,4 +214,20 @@ dir ????????.bat & REM Eight "?" - same as * here
 :: Ask for some choice
 :: CHOICE
 
+:: End script
+:: goto :eof
 
+call :someFunction result, peoples
+echo %result%
+call :someFunction result users
+echo %result%
+echo No someLocal here: %someLocal%
+goto :jumpOverSomeFunction
+
+:someFunction
+setlocal
+set someLocal=local
+endlocal & set %1=Hello %someLocal% %2
+exit /b
+
+:jumpOverSomeFunction
