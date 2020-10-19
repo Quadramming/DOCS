@@ -4,7 +4,7 @@ Language: Cpp
 AccessModifierOffset: -2
 AlignAfterOpenBracket: AlwaysBreak
 AlignConsecutiveAssignments: false
-#AlignConsecutiveBitFields: false
+AlignConsecutiveBitFields: false
 AlignConsecutiveDeclarations: false
 AlignConsecutiveMacros: false
 AlignEscapedNewlines: DontAlign
@@ -15,7 +15,7 @@ AllowAllConstructorInitializersOnNextLine: false
 AllowAllParametersOfDeclarationOnNextLine: false
 AllowShortBlocksOnASingleLine: Never
 AllowShortCaseLabelsOnASingleLine: false
-#AllowShortEnumsOnASingleLine: false
+AllowShortEnumsOnASingleLine: false
 AllowShortFunctionsOnASingleLine: false
 AllowShortIfStatementsOnASingleLine: false
 AllowShortLambdasOnASingleLine: All
@@ -26,7 +26,7 @@ AlwaysBreakBeforeMultilineStrings: false
 AlwaysBreakTemplateDeclarations: Yes
 BinPackArguments: false
 BinPackParameters: false
-#BitFieldColonSpacing: Both
+BitFieldColonSpacing: Both
 BraceWrapping:
   AfterCaseLabel: false
   AfterClass: false
@@ -40,8 +40,8 @@ BraceWrapping:
   AfterExternBlock: false
   BeforeCatch: false
   BeforeElse: false
-  #BeforeLambdaBody: false
-  #BeforeWhile: false
+  BeforeLambdaBody: false
+  BeforeWhile: false
   IndentBraces: false
   SplitEmptyFunction: true
   SplitEmptyRecord: true
@@ -72,7 +72,7 @@ IncludeBlocks: Preserve
 #IncludeIsMainSourceRegex#
 IndentCaseBlocks: false
 IndentCaseLabels: true
-#IndentExternBlock: Indent
+IndentExternBlock: Indent
 IndentGotoLabels: true
 IndentPPDirectives: BeforeHash
 IndentWidth: 2
