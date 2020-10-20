@@ -231,3 +231,23 @@ endlocal & set %1=Hello %someLocal% %2
 exit /b
 
 :jumpOverSomeFunction
+
+set /a calc=0xFF^^100
+echo %calc%
+set /a "calc=0xFF^100"
+echo %calc%
+set /a calc="0xFF^100"
+echo %calc%
+
+set A=100 & set B=10
+set /a calc = (0xFF - A + %B%) %% 5
+echo %calc%
+
+:: Arithmetic brackets within grouping brackets = trouble
+:: if SOMETIHNG (set /a SOME=(1+2)*3)
+:: Works with ^ escaping or "..."
+:: if SOMETIHNG (set /a SOME=^(1+2^)*3)
+:: if SOMETIHNG (set /a "SOME=(1+2)*3")
+
+set /a A=20, B=C=30 & set /a D = %random% %% 0x05
+echo %A%, %B%, %C%, %D%
