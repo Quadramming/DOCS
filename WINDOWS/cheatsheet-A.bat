@@ -251,3 +251,21 @@ echo %calc%
 
 set /a A=20, B=C=30 & set /a D = %random% %% 0x05
 echo %A%, %B%, %C%, %D%
+
+:: /b - no header
+:: /s - include subdirs
+dir /b /s *.txt
+
+dir /b /s | findstr t.t
+
+FOR /R %%i IN (*) DO echo %%i
+
+:: Show file content
+FORFILES /S /M *.txt /C "cmd /c type @file | more"
+
+for /r %%i in (*) do @echo %%~ti | findstr 09\.2020 && echo %%i
+
+:: Search by content
+findstr /i /s /m con..nt *.txt
+
+where git
