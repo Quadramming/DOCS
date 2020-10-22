@@ -269,3 +269,26 @@ for /r %%i in (*) do @echo %%~ti | findstr 09\.2020 && echo %%i
 findstr /i /s /m con..nt *.txt
 
 where git
+
+attrib foo
+
+:: Using of !var! - delayed expansion
+setlocal EnableDelayedExpansion
+
+FOR /L %%i IN (1, 1, 10) DO (
+  set array-%%i=!random!
+)
+
+FOR /L %%i IN (1, 1, 10) DO (
+  echo !array-%%i!
+  set array-%%i=wow-%%i
+)
+
+:: Array iter
+set /a i = 1
+:startArrayLoop
+if not defined array-%i% goto endArrayLoop
+echo Array element %i%: !array-%i%!
+set /a i+=1
+goto startArrayLoop
+:endArrayLoop
