@@ -292,3 +292,100 @@ echo Array element %i%: !array-%i%!
 set /a i+=1
 goto startArrayLoop
 :endArrayLoop
+
+ASSOC | FIND ".txt"
+ASSOC | FIND ".html"
+
+FTYPE | FIND "txtfile"
+FTYPE | FIND "htmlfile"
+
+:: Clear file
+type nul > foo
+break > foo
+
+:: CALL batch.bat args
+
+:: Show current dir
+cd
+
+:: cd /d [DIR]
+:: subst A: \\onlineServer\dir && cd /d A:
+:: pushd \\onlineServer\dir
+:: popd
+:: CHDIR = CD
+
+:: Clean screen
+:: cls
+
+:: Change BG color
+color f1
+color
+
+copy bar foo
+
+:: Delete files (SILENT + RECURSIVE)
+:: DEL /q /s [FILE|DIR]
+
+:: Show with hidden, recursive, file per line
+dir /a /b /s
+
+echo %DATE%
+
+echo AND IS ^&
+
+if exist foo (
+	echo Foo exists
+) else (
+	echo Foo NOT exists
+)
+
+:: For subprograms
+SETLOCAL
+ENDLOCAL
+
+:: ERASE = DEL
+:: EXIT /b
+
+goto :afterNever
+echo NEVER
+:afterNever
+
+MD newDir
+MKDIR alsoNewDir
+
+RD newDir
+RMDIR alsoNewDir
+
+:: Make link
+:: MKLINK
+
+MOVE foo fooBar
+REN fooBar barFoo
+RENAME barFoo foo
+
+PATH
+:: Add to PATH
+:: PATH C:\DIR;%path%
+:: Delete PATH
+:: PATH ;
+
+:: Pause for user input
+:: PAUSE
+
+PUSHD someDir
+POPD
+
+:: Change console PROMPT chars
+:: PROMPT some$G
+
+:: Get all vars
+SET /P userVar=Enter something: 
+SET withNoA=1+1
+:: With Arithmetic
+SET /A withA=1+1
+SET
+
+:::::::::::::::: TODO FOR
+:::::::::::::::: TODO IF
+:::::::::::::::: TODO SETLOCAL
+
