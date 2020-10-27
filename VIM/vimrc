@@ -43,9 +43,9 @@ function! GetLineBr()
 	if &fileformat == 'dos'
 		return '\r\n'
 	elseif &fileformat == 'unix'
-		return '\r'
-	elseif &fileformat == 'mac'
 		return '\n'
+	elseif &fileformat == 'mac'
+		return '\r'
 	endif
 endfunction
 

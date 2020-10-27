@@ -4,6 +4,9 @@ VER
 HELP
 REM /?
 
+:: Turn on correct copy etc
+VERIFY ON
+
 :: Comment
 REM Comment
 
@@ -385,7 +388,35 @@ SET withNoA=1+1
 SET /A withA=1+1
 SET
 
+:: Shift all arguments to lower %1 = %2 ...
+SHIFT
+
+
+:: START open exe or new cmd with that title
+:: For new console
+:: START
+:: For current dir in explorer
+:: START .
+:: START notepad.exe & echo "NOTEPAD OPENED"
+:: START /wait notepad.exe & echo "NOTEPAD CLOSED"
+
+:: Get current time (SET without /T)
+TIME /T
+
+TITLE I AM A NEW CMD TITLE
+
+:: Get file content
+TYPE "some file.txt"
+
+:: Get version
+VER
+
+:: Get current disk label
+VOL
+
+
 :::::::::::::::: TODO FOR
 :::::::::::::::: TODO IF
 :::::::::::::::: TODO SETLOCAL
+
 
