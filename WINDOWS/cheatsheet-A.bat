@@ -414,9 +414,50 @@ VER
 :: Get current disk label
 VOL
 
+if exist bar (
+	ECHO BAR HERE
+)
 
-:::::::::::::::: TODO FOR
-:::::::::::::::: TODO IF
-:::::::::::::::: TODO SETLOCAL
+if not exist noBar (
+	ECHO noBar is not HERE
+)
 
+if 1==1 echo 1==1
+:: equ neq lss leq gtr geq
+if 2 equ 2 echo 2 equal 2
+if 01 equ 1 echo Num equal
+if not 01==1 echo String not equal
+if /i a==A echo Case insens equal
 
+for %%i in (1,2,3) do echo %%i
+:: Mix separators
+for %%i in (1 2,3;4) do echo %%i
+:: Interpret as files
+for %%i in (*.bat) do echo %%i
+for %%i in ("*.txt") do echo %%i
+:: Recursive + full name
+for /r %%i in ("*") do echo %%i
+:: Only dirs
+for /d %%i in ("*") do echo %%i
+for /r /d %%i in ("*") do echo %%i
+for /l %%i in (1,1,10) do echo %%i
+
+:: Show files content
+:: for /f "tokens=*" %%i in (foo bar) do echo %%i
+
+for /f "tokens=*" %%i in ('dir') do echo ">>> %%i"
+(for /f "tokens=*" %%i in ('dir') do echo ">>> %%i") > foo
+
+ATTRIB
+CHCP
+:: CHOICE /m "Make some choice"
+
+:: Save all "SET" vars to clipboard
+:: set | clip
+
+doskey ll=dir /b /s
+doskey /macros
+
+DRIVERQUERY
+
+FC foo bar
