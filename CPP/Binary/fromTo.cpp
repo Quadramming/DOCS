@@ -31,7 +31,7 @@ TYPE fromBinary(const Binary& bin) {
 	return out;
 }
 
-void example() {
+void main() {
 	constexpr uint64_t value {0x1234567890};
 	const auto binary {toBinary(value)};
 	const auto back {fromBinary<uint64_t>(binary)};

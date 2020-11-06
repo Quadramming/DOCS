@@ -33,7 +33,7 @@ public:
 	
 };
 
-int main() {
+void main() {
 	// Default constructor
 	Foo a;
 	

@@ -461,3 +461,29 @@ doskey /macros
 DRIVERQUERY
 
 FC foo bar
+FC foo bar > NUL && ECHO EQUAL || echo NOT EQUAL
+
+dir | find "bar"
+:: Non matching + case insense
+dir | find /i /v "FOO"
+:: Count
+dir | find /C "foo"
+:: Count lines
+find /c /v "" < "cheatsheet-A.bat"
+type "cheatsheet-A.bat" | find /c /v ""
+
+:: /r - regexp
+:: space - alternatives
+echo two | findstr /r "one two three"
+
+:: /c - prevent spaces as alt
+echo one two | findstr /c:"one two"
+
+:: Few /c - works like "or"
+echo two one | findstr /c:"one" /c:"two"
+
+:: Intersection
+findstr /xlg:foo bar
+
+:: Difference
+findstr /xlg:foo bar
