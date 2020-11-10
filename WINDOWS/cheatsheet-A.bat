@@ -487,3 +487,74 @@ findstr /xlg:foo bar
 
 :: Difference
 findstr /xlg:foo bar
+
+forfiles /m *.bat /s /c "cmd /c echo @path"
+
+:: FORMAT - for disk format
+:: FSUTIL - for disk utils
+
+:: Get group policy
+:: GPRESULT /R
+
+ipconfig
+
+:: LABEL - set disk label
+:: MAKECAB - for .cab files
+
+mode
+
+:: Set console to:
+:: mode con cols=100 lines=100
+
+:: Code page:
+mode con cp
+:: mode con cp select=1251
+
+more foo
+:: Tabs to 2 spaces
+more /t2 foo > bar
+
+:: NET - for net utils
+
+OPENFILES
+
+ping 127.0.0.1 /n 1
+
+:: RECOVER - recover data from bad disk
+
+:: REG - work with registry
+:: REPLACE - replace files
+:: ROBOCOPY - copy files
+:: RUNDLL32 - run function from DLL
+:: SC (START|STOP|QUERY) name - Windows services control
+SC QUERY
+
+:: SCHTASKS - run program in certain time
+:: SETX - global SET
+:: SHUTDOWN - shut down computer
+
+SORT foo
+MORE bar | SORT /r
+
+:: Make dir as disk P:
+subst p: .
+subst
+subst /d p:
+
+:: SYSTEMINFO - get system info
+
+tasklist | sort | find "firefox"
+tasklist /svc
+
+:: taskkill /f /im process.exe
+:: taskkill /PID 1234
+
+timeout /t 5
+
+tree /f
+
+WHERE PHP
+
+:: WMIC - starts Windows Management Instrumentation Command-line
+
+:: XCOPY - as COPY, but use ROBOCOPY
