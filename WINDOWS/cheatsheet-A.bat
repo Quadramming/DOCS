@@ -29,6 +29,10 @@ echo File size: %~z7
 echo File P+N: %~pn7
 echo First match in PATH (or empty): %~$PATH:1
 echo Self file: %~nx0
+echo Removes quotes from the first command line argument: %~0
+echo Current script dir: %~dp0
+
+GOTO :eof
 
 echo Current dir: %CD%
 echo System time: %TIME%
@@ -76,7 +80,7 @@ echo A & echo B
 :: && - Do B if A returns zero (success)
 echo A && echo B
 :: || - Do B if A returns non-zero (fail)
-echo A && echo B
+echo A || echo B
 :: Parenthesized command works like one simple command
 (echo A & echo B) | more
 
