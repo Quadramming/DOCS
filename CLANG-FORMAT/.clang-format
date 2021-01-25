@@ -2,31 +2,36 @@
 Language: Cpp
 #BasedOnStyle#
 AccessModifierOffset: -2
+
 AlignAfterOpenBracket: AlwaysBreak
 AlignConsecutiveAssignments: false
 AlignConsecutiveBitFields: false
 AlignConsecutiveDeclarations: false
 AlignConsecutiveMacros: false
 AlignEscapedNewlines: DontAlign
-AlignOperands: true
+AlignOperands: DontAlign # Rev
 AlignTrailingComments: false
-AllowAllArgumentsOnNextLine: false
-AllowAllConstructorInitializersOnNextLine: false
-AllowAllParametersOfDeclarationOnNextLine: false
-AllowShortBlocksOnASingleLine: Never
-AllowShortCaseLabelsOnASingleLine: false
-AllowShortEnumsOnASingleLine: false
-AllowShortFunctionsOnASingleLine: false
-AllowShortIfStatementsOnASingleLine: false
+
+AllowAllArgumentsOnNextLine: true
+AllowAllConstructorInitializersOnNextLine: true
+AllowAllParametersOfDeclarationOnNextLine: true
+AllowShortBlocksOnASingleLine: Always
+AllowShortCaseLabelsOnASingleLine: true
+AllowShortEnumsOnASingleLine: true
+AllowShortFunctionsOnASingleLine: All
+AllowShortIfStatementsOnASingleLine: Always
 AllowShortLambdasOnASingleLine: All
-AllowShortLoopsOnASingleLine: false
+AllowShortLoopsOnASingleLine: true
+
 #AlwaysBreakAfterDefinitionReturnType: None # deprecated
 AlwaysBreakAfterReturnType: None
 AlwaysBreakBeforeMultilineStrings: false
 AlwaysBreakTemplateDeclarations: Yes
-BinPackArguments: false
-BinPackParameters: false
-BitFieldColonSpacing: Both
+
+#AttributeMacros#
+BinPackArguments: true
+BinPackParameters: true
+BitFieldColonSpacing: After
 BraceWrapping:
   AfterCaseLabel: false
   AfterClass: false
@@ -43,24 +48,27 @@ BraceWrapping:
   BeforeLambdaBody: false
   BeforeWhile: false
   IndentBraces: false
-  SplitEmptyFunction: true
-  SplitEmptyRecord: true
-  SplitEmptyNamespace: true
-BreakAfterJavaFieldAnnotations: true
-BreakBeforeBinaryOperators: NonAssignment
+  SplitEmptyFunction: false
+  SplitEmptyRecord: false
+  SplitEmptyNamespace: false
+
+##BreakAfterJavaFieldAnnotations: true
+BreakBeforeBinaryOperators: None
 BreakBeforeBraces: Custom
-BreakBeforeTernaryOperators: false
+#BreakBeforeConceptDeclarations: true # Not yet available
+BreakBeforeTernaryOperators: true
 BreakConstructorInitializers: AfterColon
 BreakInheritanceList: AfterColon
 BreakStringLiterals: true
+
 ColumnLimit: 0
 #CommentPragmas#
 CompactNamespaces: false
-ConstructorInitializerAllOnOneLineOrOnePerLine: true
+ConstructorInitializerAllOnOneLineOrOnePerLine: false
 ConstructorInitializerIndentWidth: 2
 ContinuationIndentWidth: 2
-Cpp11BracedListStyle: true
-DeriveLineEnding: true
+Cpp11BracedListStyle: false
+DeriveLineEnding: false
 DerivePointerAlignment: false
 DisableFormat: false
 #ExperimentalAutoDetectBinPacking# experimental
@@ -75,6 +83,7 @@ IndentCaseLabels: true
 IndentExternBlock: Indent
 IndentGotoLabels: true
 IndentPPDirectives: BeforeHash
+#IndentRequires: false # Not yet available
 IndentWidth: 2
 IndentWrappedFunctionNames: false
 InsertTrailingCommas: None
@@ -87,11 +96,13 @@ KeepEmptyLinesAtTheStartOfBlocks: true
 MaxEmptyLinesToKeep: 1
 NamespaceIndentation: All
 #NamespaceMacros#
+
 ##ObjCBinPackProtocolList
 ##ObjCBlockIndentWidth
 ##ObjCBreakBeforeNestedBlockParam
 ##ObjCSpaceAfterProperty
 ##ObjCSpaceBeforeProtocolList
+
 PenaltyBreakAssignment: 0
 PenaltyBreakBeforeFirstCallParameter: 0
 PenaltyBreakComment: 0
@@ -99,16 +110,21 @@ PenaltyBreakFirstLessLess: 0
 PenaltyBreakString: 0
 PenaltyBreakTemplateDeclaration: 0
 PenaltyExcessCharacter: 0
+#PenaltyIndentedWhitespace: 0 # Not yet available
 PenaltyReturnTypeOnItsOwnLine: 0
+
 PointerAlignment: Left
 #RawStringFormats#
 ReflowComments: false
 SortIncludes: false
+##SortJavaStaticImport
 SortUsingDeclarations: false
 SpaceAfterCStyleCast: true
 SpaceAfterLogicalNot: true
 SpaceAfterTemplateKeyword: true
+#SpaceAroundPointerQualifiers: Default # Not yet available
 SpaceBeforeAssignmentOperators: true
+#SpaceBeforeCaseColon: false # Not yet available
 SpaceBeforeCpp11BracedList: true
 SpaceBeforeCtorInitializerColon: false
 SpaceBeforeInheritanceColon: false
@@ -125,6 +141,7 @@ SpacesInContainerLiterals: false
 SpacesInParentheses: false
 SpacesInSquareBrackets: false
 Standard: Auto
+#StatementAttributeLikeMacros#
 #StatementMacros#
 TabWidth: 2
 #TypenameMacros#

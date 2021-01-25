@@ -37,4 +37,3 @@ EXIT /B 0
 :function
 SET /A result = %1 * %2
 EXIT /B %result%
-
