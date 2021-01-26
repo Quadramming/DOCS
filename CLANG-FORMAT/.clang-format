@@ -1,5 +1,8 @@
+# VERSION 1.1
 ---
-Language: Cpp
+#Language: Cpp#
+#Language: JavaScript#
+
 #BasedOnStyle#
 AccessModifierOffset: -2
 
@@ -88,8 +91,10 @@ IndentWidth: 2
 IndentWrappedFunctionNames: false
 InsertTrailingCommas: None
 ##JavaImportGroups
-##JavaScriptQuotes: Single
-##JavaScriptWrapImports: false
+
+JavaScriptQuotes: Single
+JavaScriptWrapImports: false
+
 KeepEmptyLinesAtTheStartOfBlocks: true
 #MacroBlockBegin#
 #MacroBlockEnd#
@@ -149,7 +154,3 @@ UseCRLF: false
 UseTab: ForContinuationAndIndentation
 #WhitespaceSensitiveMacros#
 #DanglingParenthesis: true # Control when be available
----
-Language: JavaScript
-JavaScriptQuotes: Single
-JavaScriptWrapImports: false
