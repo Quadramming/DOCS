@@ -69,5 +69,21 @@ module.exports = {
 		'no-useless-backreference': 'error',
 		'require-atomic-updates': ['error', { 'allowProperties': false }],
 		'use-isnan': ['error', {'enforceForSwitchCase': true, 'enforceForIndexOf': true}]
+		//====
+		'accessor-pairs': ["error", { "getWithoutSet": true, getWithoutSet : true, enforceForClassMembers : true }],
+		'arrow-body-style': ["error", "as-needed", { "requireReturnForObjectLiteral": true }],
+		'block-scoped-var': "error",
+		'camelcase': ["error", {properties: "always", "ignoreDestructuring": false, "ignoreImports": false, "ignoreGlobals": false}],
+		'capitalized-comments': ["error", "always"],
+		'class-methods-use-this': ["error", { "enforceForClassFields": true }],
+		"complexity": ["error", { "max": 10 }],
+		'consistent-return': ["error", { "treatUndefinedAsUnspecified": true }],
+		'consistent-this': "error",
+		'curly': ["error", "multi"],
+		'default-case': "error",
+		'default-case-last': "error",
+		'default-param-last': "error",
+		'dot-notation': ["error", { "allowKeywords": true }],
+		'eqeqeq': ["error", "always", {"null": "always"}]
 	}
 };
