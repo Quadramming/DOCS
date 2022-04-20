@@ -1,7 +1,7 @@
  import * as cp from 'child_process';
  import * as fs from 'fs';
 
-// Oneliners v2022.04.10
+// Oneliners v2022.04.17
 const c = (...text) => console.log(...text)||text[0];
 const a = text => alert(text);
 const t = text => {throw Error(text)};
@@ -24,4 +24,5 @@ const charFromHex = hex => checkString(hex)&&check(hex.length === 2)&&String.fro
 const charFromCode = code => String.fromCharCode(code);
 const swapElements = (a,x,y) => [a[x],a[y]]=[a[y],a[x]];
 const shuffleString = (t,_,a=[...t],l=t.length) => a.forEach((e,i) => swapElements(a,i,random(i,l-1)))||a.join(``);
+const clipboard = text => navigator.clipboard.writeText(text);
 // End oneliners
