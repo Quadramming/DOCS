@@ -114,6 +114,17 @@ module.exports = {
 		'no-delete-var': "error",
 		// no-div-regex
 		'no-else-return': ["error", {allowElseIf: true}],
-
+		'no-empty': ["error", { "allowEmptyCatch": true }],
+		'no-empty-function': "error",
+		'no-eq-null': "error",
+		'no-eval': "error",
+		'no-extend-native': "error",
+		'no-extra-bind': "error",
+		'no-extra-boolean-cast': ["error", {"enforceForLogicalOperands": true}],
+		'no-extra-label': "error",
+		'no-extra-semi': "error",
+		'no-floating-decimal': "error",
+		'no-global-assign': "error",
+		'no-implicit-coercion': ["error", { "disallowTemplateShorthand": true }],
 	}
 };
