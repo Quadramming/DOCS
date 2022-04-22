@@ -68,7 +68,7 @@ module.exports = {
 		'no-use-before-define': ['error', { 'functions': true, 'classes': true, 'variables': true }],
 		'no-useless-backreference': 'error',
 		'require-atomic-updates': ['error', { 'allowProperties': false }],
-		'use-isnan': ['error', {'enforceForSwitchCase': true, 'enforceForIndexOf': true}]
+		'use-isnan': ['error', {'enforceForSwitchCase': true, 'enforceForIndexOf': true}],
 		//====
 		'accessor-pairs': ["error", { "getWithoutSet": true, getWithoutSet : true, enforceForClassMembers : true }],
 		'arrow-body-style': ["error", "as-needed", { "requireReturnForObjectLiteral": true }],
@@ -84,6 +84,36 @@ module.exports = {
 		'default-case-last': "error",
 		'default-param-last': "error",
 		'dot-notation': ["error", { "allowKeywords": true }],
-		'eqeqeq': ["error", "always", {"null": "always"}]
+		'eqeqeq': ["error", "always", {"null": "always"}],
+		'func-name-matching': ["error", "always", { "considerPropertyDescriptor": true, "includeCommonJSModuleExports": true }],
+		'func-names': ["error", "as-needed", { "generators": "as-needed" }],
+		'func-style': ["error", "declaration", { "allowArrowFunctions": true }],
+		'grouped-accessor-pairs': ["error", "getBeforeSet"],
+		'guard-for-in': "error",
+		// id-denylist
+		// id-length
+		// id-match
+		"init-declarations": ["error", "always"],
+		"max-classes-per-file": ["error", {ignoreExpressions: false}],
+		// max-depth
+		// max-lines
+		// max-lines-per-function
+		// max-nested-callbacks
+		// max-params
+		// max-statements
+		'multiline-comment-style': ["error", "bare-block"],
+		'new-cap': ["error", { "newIsCap": true , "capIsNew": true, "properties": true}],
+		// no-alert
+		'no-array-constructor': "error",
+		// no-bitwise
+		'no-caller': "error",
+		'no-case-declarations': "error",
+		// no-confusing-arrow
+		// no-console
+		'no-continue': "error",
+		'no-delete-var': "error",
+		// no-div-regex
+		'no-else-return': ["error", {allowElseIf: true}],
+
 	}
 };
