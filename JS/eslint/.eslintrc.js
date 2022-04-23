@@ -9,12 +9,12 @@ module.exports = {
 		'sourceType': 'module'
 	},
 	'rules': {
-		'indent': [ 'error', 'tab' ],
-		'linebreak-style': [ 'error', 'unix' ],
-		'quotes': [ 'error', 'single' ],
-		'semi': [ 'error', 'always' ],
+		'indent': ['error', 'tab'],
+		'linebreak-style': ['error', 'unix'],
+		'quotes': ['error', 'single'],
+		'semi': ['error', 'always'],
 		//================================================================
-		'array-callback-return': ['error', {'checkForEach': true, 'allowImplicit': true}],
+		'array-callback-return': ['error', { 'checkForEach': true, 'allowImplicit': true }],
 		'constructor-super': 'error',
 		'for-direction': 'error',
 		'getter-return': ['error', { allowImplicit: true }],
@@ -49,7 +49,7 @@ module.exports = {
 		'no-obj-calls': 'error',
 		'no-promise-executor-return': 'error',
 		'no-prototype-builtins': 'error',
-		'no-self-assign': ['error', {'props': true}],
+		'no-self-assign': ['error', { 'props': true }],
 		'no-self-compare': 'error',
 		'no-setter-return': 'error',
 		'no-sparse-arrays': 'error',
@@ -64,16 +64,16 @@ module.exports = {
 		'no-unsafe-negation': ['error', { 'enforceForOrderingRelations': true }],
 		'no-unsafe-optional-chaining': ['error', { 'disallowArithmeticOperators': true }],
 		'no-unused-private-class-members': 'error',
-		'no-unused-vars': ['error', { 'vars': 'all', 'args': 'all', 'ignoreRestSiblings': false , 'caughtErrors': 'all'}],
+		'no-unused-vars': ['error', { 'vars': 'all', 'args': 'all', 'ignoreRestSiblings': false, 'caughtErrors': 'all' }],
 		'no-use-before-define': ['error', { 'functions': true, 'classes': true, 'variables': true }],
 		'no-useless-backreference': 'error',
 		'require-atomic-updates': ['error', { 'allowProperties': false }],
-		'use-isnan': ['error', {'enforceForSwitchCase': true, 'enforceForIndexOf': true}],
+		'use-isnan': ['error', { 'enforceForSwitchCase': true, 'enforceForIndexOf': true }],
 		//====
-		'accessor-pairs': ["error", { "getWithoutSet": true, getWithoutSet : true, enforceForClassMembers : true }],
+		'accessor-pairs': ["error", { "getWithoutSet": true, getWithoutSet: true, enforceForClassMembers: true }],
 		'arrow-body-style': ["error", "as-needed", { "requireReturnForObjectLiteral": true }],
 		'block-scoped-var': "error",
-		'camelcase': ["error", {properties: "always", "ignoreDestructuring": false, "ignoreImports": false, "ignoreGlobals": false}],
+		'camelcase': ["error", { properties: "always", "ignoreDestructuring": false, "ignoreImports": false, "ignoreGlobals": false }],
 		'capitalized-comments': ["error", "always"],
 		'class-methods-use-this': ["error", { "enforceForClassFields": true }],
 		"complexity": ["error", { "max": 10 }],
@@ -84,7 +84,7 @@ module.exports = {
 		'default-case-last': "error",
 		'default-param-last': "error",
 		'dot-notation': ["error", { "allowKeywords": true }],
-		'eqeqeq': ["error", "always", {"null": "always"}],
+		'eqeqeq': ["error", "always", { "null": "always" }],
 		'func-name-matching': ["error", "always", { "considerPropertyDescriptor": true, "includeCommonJSModuleExports": true }],
 		'func-names': ["error", "as-needed", { "generators": "as-needed" }],
 		'func-style': ["error", "declaration", { "allowArrowFunctions": true }],
@@ -94,7 +94,7 @@ module.exports = {
 		// id-length
 		// id-match
 		"init-declarations": ["error", "always"],
-		"max-classes-per-file": ["error", {ignoreExpressions: false}],
+		"max-classes-per-file": ["error", { ignoreExpressions: false }],
 		// max-depth
 		// max-lines
 		// max-lines-per-function
@@ -102,7 +102,7 @@ module.exports = {
 		// max-params
 		// max-statements
 		'multiline-comment-style': ["error", "bare-block"],
-		'new-cap': ["error", { "newIsCap": true , "capIsNew": true, "properties": true}],
+		'new-cap': ["error", { "newIsCap": true, "capIsNew": true, "properties": true }],
 		// no-alert
 		'no-array-constructor': "error",
 		// no-bitwise
@@ -113,18 +113,55 @@ module.exports = {
 		'no-continue': "error",
 		'no-delete-var': "error",
 		// no-div-regex
-		'no-else-return': ["error", {allowElseIf: true}],
+		'no-else-return': ["error", { allowElseIf: true }],
 		'no-empty': ["error", { "allowEmptyCatch": true }],
 		'no-empty-function': "error",
 		'no-eq-null': "error",
 		'no-eval': "error",
 		'no-extend-native': "error",
 		'no-extra-bind': "error",
-		'no-extra-boolean-cast': ["error", {"enforceForLogicalOperands": true}],
+		'no-extra-boolean-cast': ["error", { "enforceForLogicalOperands": true }],
 		'no-extra-label': "error",
 		'no-extra-semi': "error",
 		'no-floating-decimal': "error",
 		'no-global-assign': "error",
 		'no-implicit-coercion': ["error", { "disallowTemplateShorthand": true }],
+		'no-implicit-globals': ["error", { "lexicalBindings": true }],
+		'no-implied-eval': "error",
+		// no-inline-comments
+		'no-invalid-this': ["error", { "capIsConstructor": false }],
+		'no-iterator': "error",
+		'no-label-var': "error",
+		'no-labels': "error",
+		'no-lone-blocks': "error",
+		'no-lonely-if': "error",
+		'no-loop-func': "error",
+		'no-magic-numbers': ["error", { "ignoreArrayIndexes": false, "ignoreDefaultValues": false, "enforceConst": true, "detectObjects": true }],,
+		'no-mixed-operators': ["error", { "allowSamePrecedence": true }],
+		'no-multi-assign': ["error", { "ignoreNonDeclaration": false }],
+		'no-multi-str': "error",
+		'no-negated-condition': "error",
+		'no-nested-ternary': "error",
+		'no-new': "error",
+		'no-new-func': "error",
+		'no-new-object': "error",
+		'no-new-wrappers': "error",
+		'no-nonoctal-decimal-escape': "error",
+		'no-octal': "error",
+		'no-octal-escape': "error",
+		'no-param-reassign': ["error", { "props": false }],
+		'no-plusplus': ["error", { "allowForLoopAfterthoughts": true }],
+		'no-proto': "error",
+		'no-redeclare': ["error", { "builtinGlobals": true }],
+		'no-regex-spaces': "error",
+		'no-restricted-exports': ["error", { "restrictedNamedExports": ["default"] }],
+		// no-restricted-globals
+		// no-restricted-imports
+		// no-restricted-properties
+		// no-restricted-syntax
+		'no-return-assign': ["error", "always"],
+		'no-return-await': "error",
+		'no-script-url': "error",
+		'no-sequences': ["error", { "allowInParentheses": false }],
 	}
 };
