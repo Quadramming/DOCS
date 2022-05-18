@@ -1,4 +1,17 @@
 {
+	"files.autoSave": "afterDelay",
+	"editor.autoClosingBrackets": "never",
+	"editor.autoClosingQuotes": "never",
+	"editor.autoIndent": "none",
+	"editor.tabSize": 2,
+	"editor.renderWhitespace": "all",
+	"editor.insertSpaces": false,
+	"telemetry.telemetryLevel": "off",
+	"workbench.colorTheme": "Visual Studio Dark - C++",
+	"diffEditor.ignoreTrimWhitespace": false,
+	"[cpp]": {
+		"editor.defaultFormatter": "ms-vscode.cpptools"
+	},
 	"javascript.format.enable": true,
 	"javascript.format.insertSpaceAfterCommaDelimiter": true,
 	"javascript.format.insertSpaceAfterConstructor": false,
@@ -16,4 +29,5 @@
 	"javascript.format.placeOpenBraceOnNewLineForControlBlocks": false,
 	"javascript.format.placeOpenBraceOnNewLineForFunctions": false,
 	"javascript.format.semicolons": "insert",
+	"vim.useSystemClipboard": true,
 }
